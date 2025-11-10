@@ -2,6 +2,7 @@
 #'
 #' @param token API token string
 #' @return No return value
+#' @export
 set_swissmodel_token <- function(token) {
   if (is.null(token) || nchar(token) == 0) {
     stop(

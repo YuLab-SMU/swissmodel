@@ -238,7 +238,7 @@ plot_pdb <- function(pdb) {
 #' @return Analysis results
 #' @importFrom ggplot2 ggsave
 #' @export
-run_analysis <- function(pdb_file, output_dir = "./analysis_results") {
+run_pdb_analysis <- function(pdb_file, output_dir = "./analysis_results") {
   if (!dir.exists(output_dir)) {
     dir.create(output_dir, recursive = TRUE)
   }

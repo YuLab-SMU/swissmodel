@@ -152,6 +152,7 @@ check_project_status <- function(
     )) |>
       req_headers("Authorization" = paste("Token", SWISS_MODEL_TOKEN)) |>
       req_perform()
+
     status <- resp_status(response)
     if (status == 200) {
       status_info <- resp_body_json(response)
@@ -341,7 +342,7 @@ bulk_download_projects <- function(
   }
 }
 
-#' Complete Swiss Model Workflow
+#' Complete Automodel Workflow
 #'
 #' @param protein_sequence Protein sequence
 #' @param project_title Project title
@@ -351,7 +352,7 @@ bulk_download_projects <- function(
 #' @return Modeling results
 #' @importFrom jsonlite write_json
 #' @export
-run_swiss_model <- function(
+run_automodel_workflow <- function(
   protein_sequence,
   project_title = "R Automodel",
   output_dir = "./modeling_results",
